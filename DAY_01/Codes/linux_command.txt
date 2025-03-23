@@ -27,6 +27,8 @@ ABC.txt
 
 chmod 444 ABC.txt - set  permissions to read-only for everyone(user,server and admin) on the file ABC.txt
 [sasha@LAPTOP-B1CL6810 ~]$ chmod 444 ABC.txt
+
+ls -l   - List files and directories in long format
 [sasha@LAPTOP-B1CL6810 ~]$ ls -l
 total 4
 -r--r--r-- 1 sasha sasha 82 Mar 23 16:23 ABC.txt
