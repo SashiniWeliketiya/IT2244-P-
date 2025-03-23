@@ -1,0 +1,5 @@
+@echo off     ::Hides the commands
+echo date = %DATE% ::Shows the current date
+echo time = %TIME%  ::Shows the current time
+
+pause       ::Keeps the window open until you press a key
