@@ -1,9 +1,17 @@
-mkdir Critera_1   ::make directory 'Critera_1'
-cd Critera_1      ::change directory 'Critera_1'
-mkdir Standard_1   :: make directory 'Standard_1' inside the 'Critera_1'
+::make directory 'Critera_1'
+mkdir Critera_1   
+
+::change directory 'Critera_1'
+cd Critera_1  
+
+:: make directory 'Standard_1' inside the 'Critera_1'
+mkdir Standard_1   
 mkdir Standard_2
 mkdir Standard_3
-cd..                ::redirect to the previous directory
+
+
+ ::redirect to the previous directory
+cd..               
 mkdir Critera_2
 cd Critera_2
 mkdir Standard_1
