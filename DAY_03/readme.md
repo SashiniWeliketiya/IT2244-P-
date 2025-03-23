@@ -1,2 +1,2 @@
-| Codes | Output |
+| Code | Output |
 |-------|--------|
