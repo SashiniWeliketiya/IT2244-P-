@@ -1,15 +1,16 @@
-[sasha@LAPTOP-B1CL6810 ~]$ pwd  :: stands for printing work directory and it displays the full path of the current directory in the terminal
+pwd - stands for printing work directory and it displays the full path of the current directory in the terminal
+
+[sasha@LAPTOP-B1CL6810 ~]$ pwd  
 /home/sasha
 
 
+who - the community of people who contribute to and use the fedora linux operating system
 
-[sasha@LAPTOP-B1CL6810 ~]$ who :: the community of people who contribute to and use the fedora linux operating system
+[sasha@LAPTOP-B1CL6810 ~]$ who 
 
 
-
-
-[sasha@LAPTOP-B1CL6810 ~]$ awk :: make information retrieval and text manipulation easy to perform
-
+ awk - make information retrieval and text manipulation easy to perform
+[sasha@LAPTOP-B1CL6810 ~]$ awk 
 Usage: awk [POSIX or GNU style options] -f progfile [--] file ...
 Usage: awk [POSIX or GNU style options] [--] 'program' file ...
 POSIX options:          GNU long options: (standard)
@@ -63,7 +64,8 @@ Examples:
         awk -F: '{ print $1 }' /etc/passwd
 
 
-[sasha@LAPTOP-B1CL6810 ~]$ sed  :: automate  text processing tasks such as searching,replacing,inserting and deleting text
+sed  - automate  text processing tasks such as searching,replacing,inserting and deleting text
+[sasha@LAPTOP-B1CL6810 ~]$ sed  
 
 Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
 
@@ -112,16 +114,19 @@ specified, then the standard input is read.
 GNU sed home page: <https://www.gnu.org/software/sed/>.
 General help using GNU software: <https://www.gnu.org/gethelp/>.
 
-[sasha@LAPTOP-B1CL6810 ~]$ find  :: search for files and directories based on various criteria such as name,type,size,modification time,permissions and more
+
+ find  - search for files and directories based on various criteria such as name,type,size,modification time,permissions and more
+[sasha@LAPTOP-B1CL6810 ~]$ find  
 .
 ./.bash_logout
 ./.bashrc
 ./.bash_history
 ./.bash_profile
 
-[sasha@LAPTOP-B1CL6810 ~]$ ls -ltr  :: used to files and directories in long format(-l),sorted by modification time(-t),in reverse order(-r)
+ls -ltr  - used to files and directories in long format(-l),sorted by modification time(-t),in reverse order(-r)
+[sasha@LAPTOP-B1CL6810 ~]$ ls -ltr  
 total 0
 
-[sasha@LAPTOP-B1CL6810 ~]$ ls -a    :: used to list all files and directories,including hidden ones
-
+ls -a    - used to list all files and directories,including hidden ones
+[sasha@LAPTOP-B1CL6810 ~]$ ls -a    
 .  ..  .bash_history  .bash_logout  .bash_profile  .bashrc
