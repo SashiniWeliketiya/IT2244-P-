@@ -1,5 +1,11 @@
-@echo off     ::Hides the commands
-echo date = %DATE% ::Shows the current date
-echo time = %TIME%  ::Shows the current time
+::Hides the commands
+@echo off    
 
-pause       ::Keeps the window open until you press a key
+::Shoes the current date
+echo date = %DATE% 
+
+::Shows the current time
+echo time = %TIME%  
+
+::Keeps the window open until you press a key
+pause       
