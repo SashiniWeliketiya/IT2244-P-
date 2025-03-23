@@ -1,0 +1,27 @@
+mkdir Critera_1   ::make directory 'Critera_1'
+cd Critera_1      ::change directory 'Critera_1'
+mkdir Standard_1   :: make directory 'Standard_1' inside the 'Critera_1'
+mkdir Standard_2
+mkdir Standard_3
+cd..                ::redirect to the previous directory
+mkdir Critera_2
+cd Critera_2
+mkdir Standard_1
+mkdir Standard_2
+mkdir Standard_3
+mkdir Standard_4
+mkdir Standard_5
+cd..
+mkdir Critera_3
+cd Critera_3
+mkdir Standard_1
+mkdir Standard_2
+mkdir Standard_3
+mkdir Standard_4
+mkdir Standard_5
+mkdir Standard_6
+cd..
+mkdir Critera_4
+mkdir Critera_5
+
+
