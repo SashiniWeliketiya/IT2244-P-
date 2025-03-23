@@ -1,0 +1,6 @@
+@echo off
+echo Username = %USERNAME%
+echo windows version:
+
+ver
+pause
