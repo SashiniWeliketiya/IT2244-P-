@@ -1,0 +1,55 @@
+touch - create a file
+[sasha@LAPTOP-B1CL6810 ~]$ touch ABC.txt 
+
+vi - open the file
+[sasha@LAPTOP-B1CL6810 ~]$ vi ABC.txt
+
+more - Displays the content of the file
+[sasha@LAPTOP-B1CL6810 ~]$ more ABC.txt
+ Sashini
+ Yeheni
+ Nipunika
+ Ushani
+ Ridmi
+ Sewmini
+ Samodya
+ Nuzha
+ Thasika
+ Hima
+ 
+dir *.txt - lists all files with the .txt extension
+[sasha@LAPTOP-B1CL6810 ~]$ dir *.txt
+ABC.txt  abc.txt  xyz.txt
+
+find *B* - search for all file and directories with the letter "B"
+[sasha@LAPTOP-B1CL6810 ~]$ find *B*
+ABC.txt
+
+chmod 444 ABC.txt - set  permissions to read-only for everyone(user,server and admin) on the file ABC.txt
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 444 ABC.txt
+[sasha@LAPTOP-B1CL6810 ~]$ ls -l
+total 4
+-r--r--r-- 1 sasha sasha 82 Mar 23 16:23 ABC.txt
+-rw-r--r-- 1 sasha sasha  0 Mar 23 16:06 abc.txt
+-rw-r--r-- 1 sasha sasha  0 Mar 23 16:10 xyz.txt
+
+
+chmod 777 ABC.txt - set full permissions to read,write and execute for everyone on the file ABC.txt
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 777 ABC.txt
+[sasha@LAPTOP-B1CL6810 ~]$ ls -l
+total 4
+-rwxrwxrwx 1 sasha sasha 82 Mar 23 16:23 ABC.txt
+-rw-r--r-- 1 sasha sasha  0 Mar 23 16:06 abc.txt
+-rw-r--r-- 1 sasha sasha  0 Mar 23 16:10 xyz.txt
+
+
+chmod 547 ABC.txt 
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 547 ABC.txt
+[sasha@LAPTOP-B1CL6810 ~]$ ls -l
+total 4
+-r-xr--rwx 1 sasha sasha 82 Mar 23 16:23 ABC.txt
+-rw-r--r-- 1 sasha sasha  0 Mar 23 16:06 abc.txt
+-rw-r--r-- 1 sasha sasha  0 Mar 23 16:10 xyz.txt
+
+
+
