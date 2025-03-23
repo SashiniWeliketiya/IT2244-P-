@@ -1,0 +1,6 @@
+@echo off                  ::Hides the commands from being shown
+echo Username = %USERNAME% ::Shows the current user's name
+echo windows version:       ::Displays "windows version:"
+
+ver           ::Shows your Windows version
+pause         ::Keeps the window open until you press a key
