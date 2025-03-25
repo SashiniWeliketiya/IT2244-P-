@@ -1,0 +1,35 @@
+@echo off
+
+::displays the current date
+echo %date%
+
+
+::extract year from system date
+set /a current_year = %date:~10,4%
+echo Current year is %current_year%
+
+
+::extract month from system date
+set /a current_month = %date:~4,2%
+echo Current month is %current_month%
+
+
+::extract day from system date
+set /a current_day = %date:~7,2%
+echo Current day is %current_day%
+
+
+::calculation of the day of  the year
+set /a current_day_of_year = ((%current_month%-1)*30) + %current_day%
+echo Current day of the year is %current_day_of_year%
+
+
+::calculate week of the year
+set /a week_of_year = (%current_day_of_year% + 6)/7
+echo Week of year is %week_of_year%
+
+::calculate week of the month
+set /a week_of_month = (%current_day% + 6)/7
+echo Week of month is %week_of_month%
+
+pause
