@@ -1,0 +1,218 @@
+touch - create a file
+[sasha@LAPTOP-B1CL6810 ~]$ touch xyz.tsv
+
+vi - open the file
+[sasha@LAPTOP-B1CL6810 ~]$ vi xyz.tsv
+
+cut -d$'\t' -f1 - Extracts the tab seperated first column
+[sasha@LAPTOP-B1CL6810 ~]$ cut -d$'\t' -f1 xyz.tsv
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+
+cut -d$'\t' -f3 - Extracts the tab seperated third column 
+[sasha@LAPTOP-B1CL6810 ~]$  cut -d$'\t' -f3 xyz.tsv
+22
+35
+78
+12
+96
+41
+50
+68
+66
+88
+25
+
+
+head -n2 - displays the first two lines
+[sasha@LAPTOP-B1CL6810 ~]$ head -n2 xyz.tsv
+aa      11      22      33
+bb      22      35      55
+
+tail -n2 - displays the last two lines
+[sasha@LAPTOP-B1CL6810 ~]$ tail -n2 xyz.tsv
+jj      99      88      66
+kk      12      25      74
+
+cut -d" " -f3 - Extracts the third coulmn using a space as the field seperator
+[sasha@LAPTOP-B1CL6810 ~]$ cut -d" " -f3 xyz.tsv
+aa      11      22      33
+bb      22      35      55
+cc      89      78      45
+dd      63      12      32
+ee      58      96      47
+ff      84      41      21
+gg      20      50      40
+hh      75      68      22
+ii      54      66      77
+jj      99      88      66
+kk      12      25      74
+
+vi xyz.tsv - Edit the xyz.tsv file,remove tabs and add spaces between values
+[sasha@LAPTOP-B1CL6810 ~]$ vi xyz.tsv
+
+cut -d\t -f1 - Again Extracts  the tab seperated first column
+[sasha@LAPTOP-B1CL6810 ~]$ cut -d\t -f1 xyz.tsv
+aa 11 22 33
+bb 22 35 55
+cc 89 78 45
+dd 63 12 32
+ee 58 96 47
+ff 84 41 21
+gg 20 50 40
+hh 75 68 22
+ii 54 66 77
+jj 99 88 66
+kk 12 25 74
+
+cut -d' ' -f1 - Again the extracts the space seperated first column
+[sasha@LAPTOP-B1CL6810 ~]$ cut -d' ' -f1 xyz.tsv
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+
+
+cut -d' ' -f2 - extracts the space seperated second column
+[sasha@LAPTOP-B1CL6810 ~]$ cut -d' ' -f2 xyz.tsv
+11
+22
+89
+63
+58
+84
+20
+75
+54
+99
+12
+
+head - display first 10 lines
+[sasha@LAPTOP-B1CL6810 ~]$ head xyz.tsv
+aa 11 22 33
+bb 22 35 55
+cc 89 78 45
+dd 63 12 32
+ee 58 96 47
+ff 84 41 21
+gg 20 50 40
+hh 75 68 22
+ii 54 66 77
+jj 99 88 66
+
+head -8 - display first 8 lines from  head
+[sasha@LAPTOP-B1CL6810 ~]$ head -8 xyz.tsv
+aa 11 22 33
+bb 22 35 55
+cc 89 78 45
+dd 63 12 32
+ee 58 96 47
+ff 84 41 21
+gg 20 50 40
+hh 75 68 22
+
+tail -8  -  display first 8 lines from head
+[sasha@LAPTOP-B1CL6810 ~]$ tail -8 xyz.tsv
+dd 63 12 32
+ee 58 96 47
+ff 84 41 21
+gg 20 50 40
+hh 75 68 22
+ii 54 66 77
+jj 99 88 66
+kk 12 25 74
+
+
+head -1 - display first line
+[sasha@LAPTOP-B1CL6810 ~]$ head -1 xyz.tsv
+aa 11 22 33
+
+tail -1 - display last line
+[sasha@LAPTOP-B1CL6810 ~]$ tail -1 xyz.tsv
+kk 12 25 74
+
+head -100 - display first lines from head
+[sasha@LAPTOP-B1CL6810 ~]$ head -100 xyz.tsv
+aa 11 22 33
+bb 22 35 55
+cc 89 78 45
+dd 63 12 32
+ee 58 96 47
+ff 84 41 21
+gg 20 50 40
+hh 75 68 22
+ii 54 66 77
+jj 99 88 66
+kk 12 25 74
+
+head -8 xyz.tsv | tail -n1 - extracts the 8th line
+[sasha@LAPTOP-B1CL6810 ~]$ head -8 xyz.tsv | tail -n1
+hh 75 68 22
+
+awk '{print}' - print the entire file using awk
+[sasha@LAPTOP-B1CL6810 ~]$ awk '{print}' xyz.tsv
+aa 11 22 33
+bb 22 35 55
+cc 89 78 45
+dd 63 12 32
+ee 58 96 47
+ff 84 41 21
+gg 20 50 40
+hh 75 68 22
+ii 54 66 77
+jj 99 88 66
+kk 12 25 74
+
+awk '{print NF;exit}' - print the number of columns seperated by space
+[sashaawk '{print NF;exit}' @LAPTOP-B1CL6810 ~]$ awk '{print NF;exit}' xyz.tsv
+4
+
+
+awk -F'\t' '{print NF;exit}' - print the number of columns seperated by tabs
+[sasha@LAPTOP-B1CL6810 ~]$ awk -F'\t' '{print NF;exit}' xyz.tsv
+1
+
+
+awk '{print $3}' - prints the third column using awk
+[sasha@LAPTOP-B1CL6810 ~]$ awk '{print $3}' xyz.tsv
+22
+35
+78
+12
+96
+41
+50
+68
+66
+88
+25
+
+wc -l   - count the number of lines
+[sasha@LAPTOP-B1CL6810 ~]$ wc -l xyz.tsv
+11 xyz.tsv
+
+head -n10 xyz.tsv|grep 'dd' - extract the first 10 lines and search for "dd" in those lines
+[sasha@LAPTOP-B1CL6810 ~]$ head -n10 xyz.tsv|grep 'gg'
+gg 20 50 40
+
+
+head -n5 xyz.tsv|grep '22' - extract the first 7 lines and serach for "22" in those lines
+[sasha@LAPTOP-B1CL6810 ~]$ head -n5 xyz.tsv|grep '22'
+aa 11 22 33
+bb 22 35 55
