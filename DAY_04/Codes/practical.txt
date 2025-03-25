@@ -1,0 +1,124 @@
+
+//display the calender
+
+[sasha@LAPTOP-B1CL6810 ~]$ cal
+     March 2025
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+
+//display the date in 'DD' format
+[sasha@LAPTOP-B1CL6810 ~]$ date +%d
+25
+
+
+//display the month in 'MM' format
+[sasha@LAPTOP-B1CL6810 ~]$ date +%m
+03
+
+//display the year in 'YY' format
+[sasha@LAPTOP-B1CL6810 ~]$ date +%y
+25
+
+//display the year in 'MM/DD/YY' format
+[sasha@LAPTOP-B1CL6810 ~]$ date +%D
+03/25/25
+
+//display the year in 'YYYY' format
+[sasha@LAPTOP-B1CL6810 ~]$ date +%Y
+2025
+
+//display the month in word format
+[sasha@LAPTOP-B1CL6810 ~]$ date +%B
+March
+
+//display the month in word format in three words
+[sasha@LAPTOP-B1CL6810 ~]$ date +%b
+Mar
+
+//display the day in word format
+[sasha@LAPTOP-B1CL6810 ~]$ date +%A
+Tuesday
+
+//display the month in word format in three words
+[sasha@LAPTOP-B1CL6810 ~]$ date +%a
+Tue
+
+
+
+//Example 01
+
+echo "Who are you?"
+read name
+echo "Enter number 1"
+read x
+echo "Enter number 2"
+read y
+echo "Enter number 3"
+read z
+
+sum=$(($x+$y+$z))
+avg=$(($sum/3))
+echo "Hi" $name
+echo "Summation: " $sum
+echo "Average: " $avg
+
+[sasha@LAPTOP-B1CL6810 ~]$ vi example01.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ls
+ABC.txt  abc.txt  example01.sh  xyz.tsv  xyz.txt
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 777 example01.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ls
+ABC.txt  abc.txt  example01.sh  xyz.tsv  xyz.txt
+[sasha@LAPTOP-B1CL6810 ~]$ ./example01.sh
+Who are you?
+Sashini
+Enter number 1
+3
+Enter number 2
+5
+Enter number 3
+7
+Hi Sashini
+Summation:  15
+Average:  5
+
+
+//Example 02
+Read two number from user and print 
+addition, subtraction, multiplication and divition.
+
+[yeheni@DESKTOP-CF9TBQU ~]$ vi example02.sh
+
+echo "Enter a"
+read a
+echo "Enter number b"
+read b
+
+sum=$(($a+$b))
+sub=$(($a-$b))
+mul=$(($a*$b))
+div=$(($a/$b))
+
+echo "Summation	" $sum
+echo "Subtraction	" $sub
+echo "Multiplication	" $mul
+echo "Division	" $div
+
+
+[sasha@LAPTOP-B1CL6810 ~]$ vi example02.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ls
+ABC.txt  abc.txt  example01.sh  example02.sh  xyz.tsv  xyz.txt
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 777 example02.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ./example02.sh
+Enter A:
+4
+Enter B:
+2
+Summation:  6
+Substraction:  2
+Multiplication:  8
+Division:  2
