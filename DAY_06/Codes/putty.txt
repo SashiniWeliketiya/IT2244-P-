@@ -1,0 +1,196 @@
+Q1) Get the calender and date
+
+[sasha@LAPTOP-B1CL6810 ~]$ cal
+     April 2025
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 3030
+
+
+[sasha@LAPTOP-B1CL6810 ~]$ date
+Sun Apr  6 22:21:36 +0530 2025
+
+Q2)Get the student name and marks for the 3 subjects from user then calculate the "Total" and "Average"
+
+
+[sasha@LAPTOP-B1CL6810 ~]$ vi Q2.sh
+
+echo 'Enter the name: '
+read name
+echo 'Enter the mark for subject 1: '
+read subject1
+echo 'Enter the mark for subject 2: '
+read subject2
+echo 'Enter the mark for subject 3: '
+read subject3
+
+Total=$(($subject1+$subject2+$subject3))
+avg=$(($Total/3))
+
+echo 'Total: '$Total
+echo 'Average: '$avg
+
+
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 777 Q2.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ./Q2.sh
+Enter the name:
+Sashini
+Enter the mark for subject 1:
+80
+Enter the mark for subject 2:
+90
+Enter the mark for subject 3:
+70
+Total: 240
+Average: 80
+
+
+Q3)Create calculator with arithmetic operators
+
+[sasha@LAPTOP-B1CL6810 ~]$ vi Q3.sh
+
+
+echo 'Enter the first number: '
+read x
+echo 'Enter the second number: '
+read y
+
+summation=$(($x+$y))
+substraction=$(($x-$y))
+Division=$(($x/$y))
+Multiplication=$(($x*$y))
+
+echo 'Summattion:  '$summation
+echo 'Substraction: ' $substraction
+echo 'Division: ' $Division
+echo 'Multiplication: ' $Multiplication
+
+
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 777 Q3.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ./Q3.sh
+Enter the first number:
+4
+Enter the second number:
+2
+Summattion:  6
+Substraction:  2
+Division:  2
+Multiplication:  8
+
+Q4)Get the days based on the user input number 
+
+[sasha@LAPTOP-B1CL6810 ~]$ vi Q4.sh
+
+
+echo 'Enter the number: '
+read number
+
+case $number in
+1)echo 'Monday';;
+2)echo 'Tuesday';;
+3)echo 'Wednesday';;
+4)echo 'Thursday';;
+5)echo 'Friday';;
+6)echo 'Saturday';;
+7)echo 'Sunday';;
+*)echo 'Invalid number!';;
+esac
+
+[sasha@LAPTOP-B1CL6810 ~]$ ./Q4.sh
+Enter the number:
+6
+Saturday:
+
+
+
+Q5)Verify whether your user name is correct or not.(Use your name as input)
+output:- Enter user name:
+         Mino
+		 User name is correct
+		 Enter user name:
+		 Pasi
+		 Username is incorrect
+		 
+[sasha@LAPTOP-B1CL6810 ~]$ vi Q5.sh 
+
+echo 'Enter user name:'
+read name
+username="Mino"
+
+if [ "$username" == "$name" ]; then
+echo 'Username is correct'
+else
+echo 'Username is incorrect'
+fi
+
+
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 777 Q5.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ./Q5.sh
+Enter user name:
+Mino
+Username is correct
+[sasha@LAPTOP-B1CL6810 ~]$ ./Q5.sh
+Enter user name:
+Sashini
+Username is incorrect
+		 
+		 
+Q6)
+
+
+
+  Output:- Enter two numbers:
+            7 5
+			7 is greater than 5
+			 
+   Output:- Enter two numbers:
+            1 9
+			1 is greater than 9
+	
+[sasha@LAPTOP-B1CL6810 ~]$ vi Q6.sh
+	
+echo 'Enter two numbers: '
+read num1 num2
+
+if [ $num1 -gt $num2 ]; then
+echo "$num1 is greater than $num2"
+elif [ $num1 -lt $num2 ]; then
+echo "$num1 is less than $num2"
+else
+echo "$num1 is equal to $num2"
+fi	
+			
+
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 777 Q6.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ./Q6.sh
+Enter two numbers:
+7 5
+7 is greater than 5
+[sasha@LAPTOP-B1CL6810 ~]$ ./Q6.sh
+Enter two numbers:
+1 9
+1 is less than 9
+[sasha@LAPTOP-B1CL6810 ~]$ ./Q6.sh
+Enter two numbers:
+5 5
+5 is equal to 5
+			
+Q7)Create simple calculator using 'expr' command same as the question 3
+
+
+[sasha@LAPTOP-B1CL6810 ~]$ vi Q7.sh
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 777 Q7.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ./Q7.sh
+Enter the first number:
+4
+Enter the second number:
+2
+Summattion:  6
+Substraction:  2
+Division:  2
+Multiplication:  8
+
+			 		 
