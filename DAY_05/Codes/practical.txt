@@ -1,0 +1,153 @@
+//create a csv file with a set of data seperated by commas.
+[sasha@LAPTOP-B1CL6810 ~]$ vi practical1.csv
+
+ID,Name,Age,Salary,Department
+101,Alice,30,70000,Engineering
+102,Bob,25,50000,Data Science
+103,Charlie,35,80000,HR
+104,Smith,25,60000,HR
+105,Eve,40,60000,Engineering
+106,Frank,38,75000,HR
+107,Grace,27,72000,Data Science
+108,Hank,32,68000,Engineering
+109,Ivy,29,62000,Data Science
+110,Jack,31,71000,HR
+
+
+//display all details of engineers
+[sasha@LAPTOP-B1CL6810 ~]$ grep 'Engineering' practical1.csv
+101,Alice,30,70000,Engineering
+105,Eve,40,60000,Engineering
+108,Hank,32,68000,Engineering
+
+//display the first five set of data
+[sasha@LAPTOP-B1CL6810 ~]$ head -5 practical1.csv
+ID,Name,Age,Salary,Department
+101,Alice,30,70000,Engineering
+102,Bob,25,50000,Data Science
+103,Charlie,35,80000,HR
+104,Smith,25,60000,HR
+
+//display the three lines of data
+[sasha@LAPTOP-B1CL6810 ~]$ tail -3 practical1.csv
+108,Hank,32,68000,Engineering
+109,Ivy,29,62000,Data Science
+110,Jack,31,71000,HR
+
+//display the third column
+[sasha@LAPTOP-B1CL6810 ~]$ awk -F',' '{print $3}' practical1.csv
+Age
+30
+25
+35
+25
+40
+38
+27
+32
+29
+31
+
+[sasha@LAPTOP-B1CL6810 ~]$ cut -d, -f3 practical1.csv
+Age
+30
+25
+35
+25
+40
+38
+27
+32
+29
+31
+
+//display the 7th line
+[sasha@LAPTOP-B1CL6810 ~]$ head -n7 practical1.csv | tail -n1
+106,Frank,38,75000,HR
+
+//display and sort the third column
+[sasha@LAPTOP-B1CL6810 ~]$ awk -F',' '{print $4}' practical1.csv | sort
+50000
+60000
+60000
+62000
+68000
+70000
+71000
+72000
+75000
+80000
+Salary
+
+//write the third column in another csv file
+[sasha@LAPTOP-B1CL6810 ~]$ awk -F',' '{print $4}' practical1.csv | sort
+50000
+60000
+60000
+62000
+68000
+70000
+71000
+72000
+75000
+80000
+Salary
+
+//sort by the age
+[sasha@LAPTOP-B1CL6810 ~]$ sort -t',' -k3,3nr practical1.csv
+105,Eve,40,60000,Engineering
+106,Frank,38,75000,HR
+103,Charlie,35,80000,HR
+108,Hank,32,68000,Engineering
+110,Jack,31,71000,HR
+101,Alice,30,70000,Engineering
+109,Ivy,29,62000,Data Science
+107,Grace,27,72000,Data Science
+102,Bob,25,50000,Data Science
+104,Smith,25,60000,HR
+ID,Name,Age,Salary,Department
+
+
+//sort by the salary
+[sasha@LAPTOP-B1CL6810 ~]$ sort -t',' -k4,4n practical1.csv
+ID,Name,Age,Salary,Department
+102,Bob,25,50000,Data Science
+104,Smith,25,60000,HR
+105,Eve,40,60000,Engineering
+109,Ivy,29,62000,Data Science
+108,Hank,32,68000,Engineering
+101,Alice,30,70000,Engineering
+110,Jack,31,71000,HR
+107,Grace,27,72000,Data Science
+106,Frank,38,75000,HR
+103,Charlie,35,80000,HR
+
+
+//sort by the department and salary in decending order
+[sasha@LAPTOP-B1CL6810 ~]$ sort -t',' -k5,5 -k4,4 -r practical1.csv
+103,Charlie,35,80000,HR
+106,Frank,38,75000,HR
+110,Jack,31,71000,HR
+104,Smith,25,60000,HR
+101,Alice,30,70000,Engineering
+108,Hank,32,68000,Engineering
+105,Eve,40,60000,Engineering
+ID,Name,Age,Salary,Department
+107,Grace,27,72000,Data Science
+109,Ivy,29,62000,Data Science
+102,Bob,25,50000,Data Science
+
+
+//display details without sorting the header part
+[sasha@LAPTOP-B1CL6810 ~]$ sort -t',' -k4,4 -r practical1.csv
+ID,Name,Age,Salary,Department
+103,Charlie,35,80000,HR
+106,Frank,38,75000,HR
+107,Grace,27,72000,Data Science
+110,Jack,31,71000,HR
+101,Alice,30,70000,Engineering
+108,Hank,32,68000,Engineering
+109,Ivy,29,62000,Data Science
+105,Eve,40,60000,Engineering
+104,Smith,25,60000,HR
+102,Bob,25,50000,Data Science
