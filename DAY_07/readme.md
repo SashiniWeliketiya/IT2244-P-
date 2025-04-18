@@ -1,3 +1,3 @@
 | Codes | Output |
 |-------|--------|
-|['practical.txt'](./Codes/practical.txt)|![Q1.png](./Output/Q1.png)![Q2.png](./Output/Q2.png)![Q3.png](./Output/Q3.png)|
+|['practical.txt'](./Codes/practical.txt)|![01.png](./Output/01.png)![02.png](./Output/02.png)![03.png](./Output/03.png)|
