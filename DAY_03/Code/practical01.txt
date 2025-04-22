@@ -207,12 +207,12 @@ wc -l   - count the number of lines
 [sasha@LAPTOP-B1CL6810 ~]$ wc -l xyz.tsv
 11 xyz.tsv
 
-head -n10 xyz.tsv|grep 'dd' - extract the first 10 lines and search for "dd" in those lines
+head -n10 xyz.tsv|grep 'gg' - extract the first 10 lines and search for "gg" in those lines
 [sasha@LAPTOP-B1CL6810 ~]$ head -n10 xyz.tsv|grep 'gg'
 gg 20 50 40
 
 
-head -n5 xyz.tsv|grep '22' - extract the first 7 lines and serach for "22" in those lines
+head -n5 xyz.tsv|grep '22' - extract the first 5 lines and serach for "22" in those lines
 [sasha@LAPTOP-B1CL6810 ~]$ head -n5 xyz.tsv|grep '22'
 aa 11 22 33
 bb 22 35 55
