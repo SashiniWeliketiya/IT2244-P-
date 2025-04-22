@@ -1,7 +1,7 @@
 ::Hides the commands
 @echo off    
 
-::Shoes the current date
+::Shows the current date
 echo date = %DATE% 
 
 ::Shows the current time
