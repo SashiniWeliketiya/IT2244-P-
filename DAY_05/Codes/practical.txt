@@ -65,7 +65,7 @@ Age
 [sasha@LAPTOP-B1CL6810 ~]$ head -n7 practical1.csv | tail -n1
 106,Frank,38,75000,HR
 
-//display and sort the third column
+//display and sort the forth column
 [sasha@LAPTOP-B1CL6810 ~]$ awk -F',' '{print $4}' practical1.csv | sort
 50000
 60000
