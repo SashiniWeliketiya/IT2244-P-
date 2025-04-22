@@ -80,7 +80,7 @@ Age
 Salary
 
 //write the forth column in another csv file
-[sasha@LAPTOP-B1CL6810 ~]$ awk -F',' '{print $2,$3}' practical1.csv >> xyz.csv
+[sasha@LAPTOP-B1CL6810 ~]$ awk -F',' '{print $2","$3}' practical1.csv >> xyz.csv
 50000
 60000
 60000
