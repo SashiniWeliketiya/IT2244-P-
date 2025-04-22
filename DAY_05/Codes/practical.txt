@@ -79,8 +79,8 @@ Age
 80000
 Salary
 
-//write the third column in another csv file
-[sasha@LAPTOP-B1CL6810 ~]$ awk -F',' '{print $4}' practical1.csv | sort
+//write the forth column in another csv file
+[sasha@LAPTOP-B1CL6810 ~]$ awk -F',' '{print $2,$3}' practical1.csv >> xyz.csv
 50000
 60000
 60000
