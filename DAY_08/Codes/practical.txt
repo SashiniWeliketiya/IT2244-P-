@@ -1,0 +1,112 @@
+Q1) Fibonacci series
+
+output:First 10 Fibonacci numbers:
+0 1 1 2 3 5 8 13 21 34
+
+[sasha@LAPTOP-B1CL6810 ~]$ vi q1.sh
+
+let num
+
+echo 'Enter the number:'
+read num
+
+a=0
+b=1
+
+for((i=0; i<num; i++))
+do
+echo $a
+echo " "
+
+c=$(($a+$b))
+a=$b
+b=$c
+
+done
+
+
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 777 q1.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ./q1.sh
+Enter the number:
+10
+0
+
+1
+
+1
+
+2
+
+3
+
+5
+
+8
+
+13
+
+21
+
+34
+
+
+
+
+
+Q2)Factorial 
+
+[sasha@LAPTOP-B1CL6810 ~]$ vi q2.sh
+echo '------Factorial------'
+
+fact=1
+
+echo 'Enter the number:'
+read num
+
+for((i=1; i<=num; i++))
+do
+fact=$(($fact*$i))
+done
+
+echo "Factorial is: $fact"
+
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 777 q2.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ./q2.sh
+------Factorial------
+Enter the number:
+5
+Factorial is: 120
+
+
+Q3)Multples of 3 between 1 and 50:
+
+
+[sasha@LAPTOP-B1CL6810 ~]$ vi q3.sh
+let i=3
+
+while [ $i -le 50 ]
+do
+echo $i
+i=$(($i+3))
+done
+
+
+
+[sasha@LAPTOP-B1CL6810 ~]$ chmod 777 q3.sh
+[sasha@LAPTOP-B1CL6810 ~]$ ./q3.sh
+3
+6
+9
+12
+15
+18
+21
+24
+27
+30
+33
+36
+39
+42
+45
+48
