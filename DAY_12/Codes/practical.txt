@@ -1,0 +1,241 @@
+1)Basic code for c language
+
+[sashini@Sashini ~]$ vi first.c
+#include<stdio.h>
+
+int main()
+{
+
+printf("Hello World!\n");
+
+return 0;
+}
+
+Output-->
+
+[sashini@Sashini ~]$ gcc first.c -o first
+[sashini@Sashini ~]$ ./first
+Hello World!
+
+
+/*
+%d/ %i - integers
+%f / %F - float
+%lf - double
+%c - char
+%s - strings
+*/
+
+
+2)variables
+
+[sashini@Sashini ~]$ vi second.c
+
+#include<stdio.h>
+
+int main()
+{
+  int age = 25;
+
+  printf("%d\n",age);
+
+return 0;
+}
+
+Output-->
+
+[sashini@Sashini ~]$ gcc second.c -o second
+[sashini@Sashini ~]$ ./second
+25
+
+3)assign new value for same varaible
+
+[sashini@Sashini ~]$ vi variables.c
+#include<stdio.h>
+
+int main()
+{
+int age=25;
+
+printf("Age: %d\n",age);
+
+printf("c programming\n");
+age=31;
+printf("New Age:%d\n",age);
+
+return 0;
+}
+
+Output-->
+
+[sashini@Sashini ~]$ gcc variables.c -o variables
+[sashini@Sashini ~]$ ./variables
+Age: 25
+c programming
+New Age:31
+
+
+4)
+[sashini@Sashini ~]$ vi third.c
+
+#include<stdio.h>
+int main(){
+int firstNumber=25;
+printf("first number:%d\n",firstNumber);
+
+int secondNumber=firstNumber;
+printf("Second number:%d\n",secondNumber);
+
+return 0;
+}
+
+
+[sashini@Sashini ~]$ gcc third.c -o third
+[sashini@Sashini ~]$ ./third
+First Number: 25
+Second Number: 25
+
+
+5)declare multiple variables in single line
+
+[sashini@Sashini ~]$ vi forth.c
+
+#include<stdio.h>
+
+int main(){
+
+int num1,num2=5;
+
+printf("first number:%d\n",num1);
+printf("Second number:%d\n",num2);
+
+return 0;
+}
+
+Output-->(wrong answer)
+
+[sashini@Sashini ~]$ gcc forth.c -o forth
+[sashini@Sashini ~]$ ./forth
+first number:885507336
+Second number:5
+
+6)data types
+
+[sashini@Sashini ~]$ vi datatypes.c
+
+#include<stdio.h>
+int main(){
+
+int age=10;
+double number= 12.45;
+float number1=10.9f;
+char letter='A';
+
+printf("%d\n",age);
+printf("size: %zu\n",sizeof(age));
+printf("%lf\n",number);
+printf("%.2lf\n",number);
+printf("%f\n",number1);
+printf("%.1f\n",number1);
+printf("%c\n",letter);
+printf("%d\n",letter);
+
+return 0;
+}
+
+Output-->
+
+[sashini@Sashini ~]$ gcc datatypes.c -o datatypes
+[sashini@Sashini ~]$ ./datatypes
+10
+size: 4
+12.450000
+12.45
+10.900000
+10.9
+A
+65
+
+
+7)take input from users
+
+[sashini@Sashini ~]$ vi inputuser.c
+
+#include <stdio.h>
+
+int main() {
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    printf("Age: %d\n", age);
+
+    double number;
+    printf("Enter double input: ");
+    scanf("%lf", &number);
+    printf("Number: %.2lf\n", number);
+
+    char alpha;
+    double number1;
+    printf("Enter inputs (double and char): ");
+    scanf("%lf %c", &number1, &alpha);
+    printf("Number: %.2lf\n", number1);
+    printf("Character: %c\n", alpha);
+
+    return 0;
+}
+
+Output-->
+
+[sashini@Sashini ~]$ gcc inputuser.c -o inputuser
+[sashini@Sashini ~]$ ./inputuser
+Enter your age: 25
+Age: 25
+Enter double input: 23.56
+Number: 23.56
+Enter inputs (double and char): 14.65 A
+Number: 14.65
+Character: A
+
+
+8)Arithmetic Operators
+
+[sashini@Sashini ~]$ vi Arithmetic.c
+
+#include<stdio.h>
+
+int main()
+{
+
+int a;
+printf("Enter a: ");
+scanf("%d",&a);
+
+int b;
+printf("Enter b: ");
+scanf("%d",&b);
+
+
+printf("Addition: %d\n",a+b);
+printf("Substraction: %d\n",a-b);
+printf("Multiplication: %d\n",a*b);
+printf("Division: %d\n",a/b);
+printf("Remainder: %d\n",a%b);
+
+
+return 0;
+}
+
+
+
+
+Output-->
+
+[sashini@Sashini ~]$ gcc Arithmetic.c -o Arithmetic
+[sashini@Sashini ~]$ ./Arithmetic
+Enter a: 6
+Enter b: 3
+Addition: 9
+Substraction: 3
+Multiplication: 18
+Division: 2
+Remainder: 0
