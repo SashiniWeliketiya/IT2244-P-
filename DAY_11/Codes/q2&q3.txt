@@ -1,0 +1,32 @@
+[sashini@Sashini ~]$ vi data.csv
+Name,Age,Department,GPA
+John,22,Physicalscience,3.5
+Priya,21,Environmentscience,3.7
+Meera,22,IT,3.1
+Carol,23,Physicalscience,3.99
+David,21,IT,3.98
+Riya,22,Physicalscience,3.6
+Rahman,21,Environmentscience,3.7
+Rose,22,IT,2
+Anna,23,Physicalscience,3.78
+Riyas,21,IT,3.76
+
+[sashini@Sashini ~]$ awk -F, '$4 > 3.5' data.csv
+ame,Age,Department,GPA
+Priya,21,Environmentscience,3.7
+Carol,23,Physicalscience,3.99
+David,21,IT,3.98
+Riya,22,Physicalscience,3.6
+Rahman,21,Environmentscience,3.7
+Anna,23,Physicalscience,3.78
+Riyas,21,IT,3.76
+
+[sashini@Sashini ~]$ awk -F, '{sum+=$4; count++} END { if (count > 0) print sum/count; else print "No data"; }' data.csv
+2.92583
+
+[sashini@Sashini ~]$ vi question3.sh
+[sashini@Sashini ~]$ chmod 777 question3.sh
+[sashini@Sashini ~]$ ./question3.sh
+Enter String_1: Apple
+Enter String_2: Banana
+Banana is larger than Apple
