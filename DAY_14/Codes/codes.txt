@@ -1,0 +1,133 @@
+day 14
+
+[sashini@Sashini ~]$ vi day14_1.c
+
+//01
+#include<stdio.h>
+#include<unistd.h>
+int main(){
+printf("\nHello World!");
+int f=fork();
+int p=getpid();
+printf("\nthe pid is %d",p);
+printf("\nfork number %d\n",f);
+return 0;
+}
+
+ans:-
+
+[sashini@Sashini ~]$ vi day14_1.c
+[sashini@Sashini ~]$ gcc day14_1.c -o day14_1
+[sashini@Sashini ~]$ ./day14_1
+
+Hello World!
+the pid is 45
+fork number 46
+Hello World!
+the pid is 46
+fork number 0
+
+
+//02
+
+[sashini@Sashini ~]$ vi fork.c
+#include<stdio.h>
+#include<unistd.h>
+int main(){
+fork();
+printf("\nHello World!\n");
+
+return 0;
+}
+
+answer:-
+
+[sashini@Sashini ~]$ gcc fork.c -o fork
+[sashini@Sashini ~]$ ./fork
+
+Hello World!
+
+Hello World!
+
+
+//03
+[sashini@Sashini ~]$ vi day14_2.c
+#include<stdio.h>
+#include<unistd.h>
+int main(){
+printf("\nHello World!\n");
+int f = fork();
+if(f==0){
+printf("\nI'm child process!\n");
+}
+else{
+printf("\nI'm parent process\n");
+}
+return 0;
+}
+
+
+answer:-
+
+[sashini@Sashini ~]$ gcc day14_2.c -o day14_2
+[sashini@Sashini ~]$
+[sashini@Sashini ~]$ ./day14_2
+
+Hello World!
+
+I'm parent process
+
+I'm child process!
+
+//04
+[sashini@Sashini ~]$ vi day14_3.c
+#include<stdio.h>
+#include<unistd.h>
+#include<sys/wait.h>
+
+int main(){
+    int f = fork(); // create B
+
+    if (f == 0) {
+        // Only in B
+        printf("\nI'm B\n");
+        printf("My ppid: %d\n", getppid());
+        printf("My pid: %d\n", getpid());
+    } else {
+        // Only in A
+        int k = fork(); // create C
+        if (k == 0) {
+            // Only in C
+            printf("\nI'm c\n");
+            printf("My ppid: %d\n", getppid());
+            printf("My pid: %d\n", getpid());
+        } else {
+            // Still A
+            wait(NULL);
+            wait(NULL);
+            printf("\nI'm A\n");
+            printf("My pid: %d\n", getpid());
+        }
+    }
+
+    return 0;
+}
+
+
+answer:-
+
+[sashini@Sashini ~]$ gcc day14_3.c -o day14_3
+[sashini@Sashini ~]$ ./day14_3
+
+I'm B
+My ppid: 69
+My pid: 70
+
+I'm c
+My ppid: 69
+My pid: 71
+
+I'm A
+My pid: 69
+
+
