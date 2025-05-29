@@ -1,4 +1,4 @@
-dAY 15
+
 
 //01
 [sashini@Sashini ~]$ vi day15_1.c
