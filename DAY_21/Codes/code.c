@@ -34,9 +34,9 @@ int main() //p-file descripter and it is array of size 2to readand write
 
 Output:-
 
-[2021ict65@fedora ~]$ vi pipe.c
-[2021ict65@fedora ~]$ gcc pipe.c -o pipe
-[2021ict65@fedora ~]$ ./pipe
+[sashini@Sashini ~]$ vi pipe.c
+[sashini@Sashini ~]$ gcc pipe.c -o pipe
+[sashini@Sashini ~]$ ./pipe
 hello, world #1
 hello, world #2
 hello, world #3
