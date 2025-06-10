@@ -76,13 +76,14 @@ int main() {
 }
 
 Output:-
-[2021ict65@fedora ~]$ vi Example.c
-[2021ict65@fedora ~]$ gcc Example.c -o Example
-[2021ict65@fedora ~]$ ./Example
+
+[sashini@Sashini ~]$ vi Example.c
+[sashini@Sashini ~]$ gcc Example.c -o Example
+[sashini@Sashini ~]$ ./Example
 Enter n: 5
 Enter r: 2
-I am the child! My PID is 20591
+I am the child! My PID is 129
 Child computed: n! = 120, r! = 2, (n-r)! = 6
-I am the parent! My PID is 20540
+I am the parent! My PID is 128
 nCr = 10
 nPr = 20
