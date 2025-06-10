@@ -49,3 +49,17 @@ int main() {
 
     return 0;
 }
+
+
+
+[sashini@Sashini ~]$ vi pipex.c
+[sashini@Sashini ~]$ gcc pipex.c -o pipex
+[sashini@Sashini ~]$ ./pipex
+Enter Name: Sashini
+Enter Reg No: 2021ict65
+Enter Age: 25
+
+Child Process Output:
+Name: Sashini
+Reg No: 2021ict65
+Age: 25
