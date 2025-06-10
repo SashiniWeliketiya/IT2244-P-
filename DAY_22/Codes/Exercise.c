@@ -129,3 +129,18 @@ int main() {
     return 0;
 }
 
+Output:-
+    
+[sashini@Sashini ~]$ vi pipeEx.c
+[sashini@Sashini ~]$ gcc pipeEx.c -o pipeEx
+[sashini@Sashini ~]$ ./pipeEx
+Area calculation program
+
+        Circle => C
+        Triangle => T
+        Square => S
+        Rectangle => R
+
+Enter Your Choice : C
+Enter radius: 20.9
+Calculated Area: 1372.28
