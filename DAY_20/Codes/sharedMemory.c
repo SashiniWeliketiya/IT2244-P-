@@ -70,16 +70,16 @@ int main(){
 output:-
 
 
-[2021ict65@fedora ~]$ touch shmfile
-[2021ict65@fedora ~]$ vi write.c
-[2021ict65@fedora ~]$ gcc write.c -o write
-[2021ict65@fedora ~]$ ./write
+[sashini@Sashini ~]$ touch shmfile
+[sashini@Sashini ~]$ vi write.c
+[sashini@Sashini ~]$ gcc write.c -o write
+[sashini@Sashini ~]$ ./write
 Write Data: Sashini
 Data written in memory: Sashini
 
-
-[2021ict65@fedora ~]$ vi read.c
-[2021ict65@fedora ~]$ gcc read.c -o read
-[2021ict65@fedora ~]$ ./read
+[sashini@Sashini ~]$ vi read.c
+[sashini@Sashini ~]$ gcc read.c -o read
+[sashini@Sashini ~]$ ./read
 Data read from memory: Sashini
+
 
