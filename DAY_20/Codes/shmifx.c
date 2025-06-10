@@ -36,9 +36,9 @@ return 0;
 
 output:-
 
-[2021ict65@fedora ~]$ vi ex01.c
-[2021ict65@fedora ~]$ gcc ex01.c -o ex01
-[2021ict65@fedora ~]$ ./ex01
+[sashini@Sashini ~]$ vi ex01.c
+[sashini@Sashini ~]$ gcc ex01.c -o ex01
+[sashini@Sashini ~]$ ./ex01
 Child Wrote: Hello from child!
 Parent read: Hello from child!
 
