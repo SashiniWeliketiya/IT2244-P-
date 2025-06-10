@@ -63,3 +63,5 @@ Child Process Output:
 Name: Sashini
 Reg No: 2021ict65
 Age: 25
+
+Parent Process Completed!
