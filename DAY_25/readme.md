@@ -12,6 +12,10 @@
 |['q11.sh'](./Codes/q11.sh)| ![q11.png](./Output/q11.png)|
 |['q12.sh'](./Codes/q12.sh)| ![q12.png](./Output/q12.png)|
 |['q13.sh'](./Codes/q13.sh)| ![q13.png](./Output/q13.png)|
+|['q14.sh'](./Codes/q14.sh)| ![q14.png](./Output/q14.png)|
+|['q15.sh'](./Codes/q15.sh)| ![q15.png](./Output/q15.png)|
+|['q16.sh'](./Codes/q16.sh)| ![q16.png](./Output/q16.png)|
+|['q17.sh'](./Codes/q17.sh)| ![q17.png](./Output/q17.png)|
 
 
 
